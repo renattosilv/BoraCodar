@@ -87,19 +87,36 @@ section#link-session a {
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;
+    transition: all .4s;
+}
+
+section#link-session a:hover {
+    background-color: var(--purple);
+    color: var(--body-bg-color);
 }
 
 section#social-links {
-    margin-top: 68px;
+    margin-top: 53px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 29px;
+    gap: 10px;
 }
 
 section#social-links a {
-    display: block;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s;
+}
+
+section#social-links a:hover {
+    background: linear-gradient(225deg, #BB99DD99, #FAF7FD);
+    box-shadow:  -20px 20px 41px #BB99DD,
+             20px -20px 41px #ffffff;
 }
 
 section#social-links img {
