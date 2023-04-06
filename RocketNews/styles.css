@@ -1,7 +1,178 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 :root {
+  font-size: 62.5%;
+
   --body-bg-color: #121214;
   --text-color: #E1E1E6;
   --title-color: #04D361;
   --form-color: #A8A8A8;
   --bg-button-color: #8257e5;
+
+  --font-spartan: 'League Spartan';
+  --font-work-sans: 'Work Sans';
+}
+
+body {
+  font-size: 1.4rem;
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+  max-width: 100vw;
+  min-height: 100vh;
+  font-family: var(--font-spartan), sans-serif;
+}
+
+h1 {
+  font-family: var(--font-work-sans), sans-serif;
+  color: var(--title-color);
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+
+h2 {
+  line-height: 1.6rem;
+  margin-top: .9rem;
+}
+
+p {
+  line-height: 1.9rem;
+  margin-top: .9rem;
+}
+
+input {
+  font-family: var(--font-work-sans), sans-serif;
+}
+
+main {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin-left: 3rem;
+  z-index: 1;
+}
+
+section#logo {
+  margin-top: 5rem;
+  max-width: 39rem;
+}
+
+section#logo img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+section#content {
+  margin-top: 9.2rem;
+  max-width: 50%;
+  padding-right: 3rem;
+}
+
+#form-email {
+  margin-top: 5rem;
+  width: 63%;
+}
+
+#form-email label {
+  font-weight: 700;
+  color: var(--form-color);
+  line-height: 1.9rem;
+}
+
+#form-email .input-section {
+  background-color: white;
+  margin-top: 1.7rem;
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(4px 10px 15px rgba(0, 0, 0, 0.5));
+}
+
+#form-email .input-section input {
+  width: 100%;
+  padding: 1.7rem 1.5rem;
+  outline: none;
+  border: none;
+  background: transparent;
+  color: #333;
+}
+
+#form-email .input-section button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-button-color);
+  border: none;
+  height: 5.2rem;
+  width: 5.2rem;
+}
+
+#form-email .input-section button img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+#link-noticias {
+  margin-top: 5rem;
+}
+
+#link-noticias a {
+  color: var(--bg-button-color);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+section#baner {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url("./assets/read_news.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  z-index: 0;
+}
+
+@media (max-width: 950px) {
+  section#logo {
+    max-width: 30rem;
+  }
+  section#content {
+    max-width: 60%;
+  }
+
+  #form-email {
+    width: 75%;
+  }
+  
+  section#baner {
+    left: 60%;
+  }
+}
+
+@media (max-width: 700px) {
+  section#logo {
+    max-width: 28rem;
+  }
+  section#content {
+    margin-top: 7rem;
+    max-width: 100%;
+  }
+
+  #form-email {
+    padding-right: 3rem;
+    width: 100%;
+  }
+  section#baner {
+    opacity: .2;
+    left: 0;
+  }
 }
